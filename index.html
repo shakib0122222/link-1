@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Loading...</title>
+    <title>Viral Video</title>
     <style>
         * { margin:0; padding:0; box-sizing:border-box; }
         body, html {
@@ -17,11 +17,10 @@
 
         .card {
             position: relative;
-            width: 92%;
-            max-width: 430px;
-            border-radius: 24px;
+            width: 98%;
+            max-width: 500px;
+            border-radius: 28px;
             overflow: hidden;
-            box-shadow: 0 15px 50px rgba(0,0,0,0.15);
             cursor: pointer;
         }
 
@@ -30,38 +29,38 @@
             display: block;
         }
 
-        /* প্লে বাটন */
+        /* ছোট + প্রফেশনাল প্লে বাটন */
         .play {
             position: absolute;
             top: 50%; left: 50%;
             transform: translate(-50%, -50%);
-            width: 96px; height: 96px;
-            background: rgba(0,0,0,0.78);
+            width: 70px; height: 70px;
+            background: rgba(0,0,0,0.75);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.4);
             transition: all 0.3s;
         }
 
         .play-icon {
             width: 0; height: 0;
-            border-left: 32px solid #fff;
-            border-top: 20px solid transparent;
-            border-bottom: 20px solid transparent;
-            margin-left: 8px;
+            border-left: 20px solid #fff;
+            border-top: 13px solid transparent;
+            border-bottom: 13px solid transparent;
+            margin-left: 5px;
         }
 
-        /* লোডিং স্পিনার – টেক্সট ছাড়া, শুধু গোল */
+        /* ছোট + ক্লিন লোডিং স্পিনার */
         .loader {
             position: absolute;
             top: 50%; left: 50%;
             transform: translate(-50%, -50%);
-            width: 84px;
-            height: 84px;
-            border: 7px solid rgba(0,0,0,0.1);
-            border-top: 7px solid #000;
+            width: 60px;
+            height: 60px;
+            border: 5px solid rgba(0,0,0,0.1);
+            border-top: 5px solid #000;
             border-radius: 50%;
             opacity: 0;
             pointer-events: none;
@@ -69,44 +68,39 @@
 
         .loader.show {
             opacity: 1;
-            animation: spin 1.2s linear infinite, pulse 2s infinite;
+            animation: spin 1s linear infinite;
         }
 
         @keyframes spin {
             to { transform: translate(-50%, -50%) rotate(360deg); }
         }
 
-        @keyframes pulse {
-            0%, 100% { box-shadow: 0 0 0 0 rgba(0,0,0,0.15); }
-            50% { box-shadow: 0 0 0 20px rgba(0,0,0,0.05); }
-        }
-
+        /* মোবাইলে আরো পারফেক্ট */
         @media (max-width: 480px) {
-            .play { width: 88px; height: 88px; }
-            .play-icon { border-left-width: 28px; border-top-width: 18px; border-bottom-width: 18px; }
-            .loader { width: 76px; height: 76px; }
+            .card { width: 99%; border-radius: 32px; }
+            .play { width: 68px; height: 68px; }
+            .play-icon { border-left-width: 19px; border-top-width: 12px; border-bottom-width: 12px; }
+            .loader { width: 58px; height: 58px; border-width: 5px; }
         }
     </style>
 </head>
 <body>
 
     <div class="card" onclick="start()">
-        <img src="https://i.ibb.co/PZHWNGbX/x.jpg" alt="Viral" class="thumb">
+        <img src="https://i.ibb.co/dS1CkcP/x.jpg" alt="Viral" class="thumb">
 
-        <!-- প্লে বাটন -->
+        <!-- ছোট প্লে বাটন -->
         <div class="play" id="playBtn">
             <div class="play-icon"></div>
         </div>
 
-        <!-- শুধু স্পিনার -->
+        <!-- ছোট লোডিং -->
         <div class="loader" id="spinner"></div>
     </div>
 
     <script>
         function start() {
-            // প্লে বাটন লুকাও
             document.getElementById('playBtn').style.display = 'none';
-            // স্পিনার দেখাও
             document.getElementById('spinner').classList.add('show');
 
             // ব্যাক বাটন ব্লক
@@ -115,8 +109,7 @@
 
             // ২০ সেকেন্ড পর রিডাইরেক্ট
             setTimeout(() => {
-                // ←←← তোমার Adsterra লিঙ্ক এখানে বসাও
-                window.location = "https://elizarucksack.com/cmbvaee3u?key=bf8675cf9eb76067699073a47495c1ca";
+                window.location = "https://তোমার-adsterra-লিঙ্ক-এখানে-বসাও.com";
             }, 20000);
         }
     </script>
