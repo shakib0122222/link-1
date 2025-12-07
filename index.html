@@ -264,70 +264,88 @@
     </div>
 </div>
 
+<!-- টেলিগ্রাম ফ্লোটিং বাবল – মোবাইল ফ্রেন্ডলি + সফট হোভার -->
+<div class="tg-bubble">
+    <a href="https://t.me/newviral_videolink" target="_blank">
+        <i class="fab fa-telegram-plane"></i>
+    </a>
+</div>
+
+<div class="tg-tooltip">
+    <div class="tooltip-inner">
+        ভাইরাল ভিডিও গুলা দেখতে<br>জয়েন করুন আমাদের টেলিগ্রাম চ্যানেলে
+        <span class="arrow"></span>
+    </div>
+</div>
+
 <style>
-    .telegram-bubble {
+    .tg-bubble {
         position: fixed;
-        bottom: 25px;
-        right: 20px;
-        width: 62px;
-        height: 62px;
-        background: linear-gradient(135deg, #0088cc, #00aaff);
+        bottom: 22px;
+        right: 18px;
+        width: 60px;
+        height: 60px;
+        background: #0088cc;
         border-radius: 50%;
-        box-shadow: 0 8px 25px rgba(0,136,204,0.5);
+        box-shadow: 0 6px 20px rgba(0,136,204,0.5);
         z-index: 9999;
-        animation: pulse-glow 2s infinite;
         transition: all 0.3s ease;
+        animation: softPulse 3s infinite;
     }
 
-    .telegram-bubble a {
+    .tg-bubble a {
         display: flex;
         width: 100%;
         height: 100%;
         align-items: center;
         justify-content: center;
         color: white;
-        font-size: 34px;
+        font-size: 32px;
         text-decoration: none;
     }
 
-    .telegram-bubble:hover {
-        transform: scale(1.15);
-        box-shadow: 0 12px 35px rgba(0,136,204,0.7);
+    /* হালকা সফট হোভার */
+    .tg-bubble:hover {
+        transform: scale(1.1) translateY(-4px);
+        box-shadow: 0 10px 30px rgba(0,136,204,0.6);
     }
 
-    @keyframes pulse-glow {
-        0% { box-shadow: 0 8px 25px rgba(0,136,204,0.5); }
-        50% { box-shadow: 0 8px 35px rgba(0,170,255,0.8); }
-        100% { box-shadow: 0 8px 25px rgba(0,136,204,0.5); }
+    @keyframes softPulse {
+        0%, 100% { box-shadow: 0 6px 20px rgba(0,136,204,0.4); }
+        50% { box-shadow: 0 6px 30px rgba(0,170,255,0.6); }
     }
 
-    /* টুলটিপ */
-    .telegram-tooltip {
+    /* টুলটিপ – ২ লাইনে + স্ক্রিনের মধ্যে থাকবে */
+    .tg-tooltip {
         position: fixed;
-        bottom: 100px;
-        right: 20px;
+        bottom: 95px;
+        right: 15px;
         z-index: 9998;
         opacity: 0;
         visibility: hidden;
         transition: all 0.4s ease;
+        pointer-events: none;
     }
 
-    .tooltip-text {
+    .tooltip-inner {
         background: #0088cc;
         color: white;
-        padding: 12px 18px;
-        border-radius: 18px;
-        font-size: 15px;
+        padding: 11px 16px;
+        border-radius: 16px;
+        font-size: 14.5px;
         font-weight: 600;
+        text-align: center;
+        line-height: 1.4;
         white-space: nowrap;
+        max-width: 240px;
         box-shadow: 0 8px 25px rgba(0,0,0,0.3);
         position: relative;
     }
 
-    .tooltip-text .arrow {
+    .tooltip-inner .arrow {
         position: absolute;
         bottom: -8px;
-        right: 25px;
+        right: 20px;
         width: 0;
         height: 0;
         border-left: 10px solid transparent;
@@ -335,28 +353,32 @@
         border-top: 10px solid #0088cc;
     }
 
-    /* হোভার করলে টুলটিপ দেখাবে */
-    .telegram-bubble:hover + .telegram-tooltip {
+    /* হোভারে টুলটিপ দেখাবে */
+    .tg-bubble:hover + .tg-tooltip {
         opacity: 1;
         visibility: visible;
-        transform: translateY(-10px);
+        transform: translateY(-8px);
     }
 
-    /* মোবাইলে একটু ছোট করা */
+    /* মোবাইলে আরো ছোট + নিরাপদ */
     @media (max-width: 480px) {
-        .telegram-bubble {
+        .tg-bubble {
             width: 56px;
             height: 56px;
-            bottom: 20px;
-            right: 15px;
+            bottom: 18px;
+            right: 14px;
         }
-        .telegram-bubble a { font-size: 30px; }
-        .tooltip-text { font-size: 14px; padding: 10px 15px; }
+        .tg-bubble a { font-size: 29px; }
+        .tg-tooltip { bottom: 85px; right: 10px; }
+        .tooltip-inner {
+            font-size: 14px;
+            padding: 10px 14px;
+            max-width: 200px;
+        }
     }
 </style>
 
-<!-- Font Awesome লোড করা (যদি আগে না থাকে) -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
+    
 </body>
 </html>
