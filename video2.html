@@ -11,6 +11,7 @@
             background: #ffffff;
             overflow: hidden;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
         }
@@ -22,6 +23,7 @@
             border-radius: 28px;
             overflow: hidden;
             cursor: pointer;
+            margin-bottom: 30px;
         }
 
         .thumb {
@@ -112,12 +114,35 @@
             font-weight: bold;
         }
 
+        /* নতুন যোগ করা: ডাউনলোড বাটন */
+        .download-btn {
+            display: block;
+            width: 90%;
+            max-width: 460px;
+            padding: 18px;
+            background: linear-gradient(45deg, #ff1744, #ff5252);
+            color: white;
+            font-size: 22px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(255,0,0,0.4);
+            transition: all 0.3s;
+            margin: 0 auto;
+        }
+        .download-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(255,0,0,0.5);
+        }
+
         /* মোবাইলে আরো পারফেক্ট */
         @media (max-width: 580px) {
             .card { width: 99%; border-radius: 32px; }
             .play { width: 68px; height: 68px; }
             .play-icon { border-left-width: 19px; border-top-width: 12px; border-bottom-width: 12px; }
             .loader { width: 58px; height: 58px; border-width: 5px; }
+            .download-btn { font-size: 20px; padding: 16px; }
         }
     </style>
 </head>
@@ -145,6 +170,11 @@
             </div>
         </div>
     </div>
+
+    <!-- এখানে তোমার Adsterra লিংক বসাও (চাইলে চেঞ্জ করো) -->
+    <a href="https://tu.adsterra.com/YOUR_LINK_HERE" target="_blank" class="download-btn">
+        Download Now
+    </a>
 
     <script>
         function start() {
