@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>নতুন ভাইরাল সব লিংক এখানে</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px 10px;
+        }
+
+        .header h1 {
+            font-size: 34px;
+            font-weight: 900;
+            background: linear-gradient(120deg, #ff006e, #ff6b00, #3f00ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: center;
+            margin: 30px 0 15px;
+            animation: glow 3s infinite alternate;
+        }
+
+        .header p {
+            text-align: center;
+            font-size: 19px;
+            color: #333;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+
+        @keyframes glow {
+            from { filter: drop-shadow(0 0 10px #ff006e); }
+            to { filter: drop-shadow(0 0 20px #ff6b00); }
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 22px;
+            width: 100%;
+            max-width: 460px;
+        }
+
+        .btn {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            padding: 24px;
+            border-radius: 24px;
+            font-size: 23px;
+            font-weight: 800;
+            color: white;
+            text-decoration: none;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+            transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: 0.8s;
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        .btn:hover {
+            transform: translateY(-12px) scale(1.05);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.4);
+        }
+
+        .icon {
+            font-size: 32px;
+            filter: drop-shadow(0 0 8px rgba(255,255,255,0.7));
+        }
+
+        .badge {
+            position: absolute;
+            top: 2px;
+            right: 12px;
+            background: #ff0040;
+            color: white;
+            font-size: 13px;
+            font-weight: bold;
+            padding: 6px 14px;
+            border-radius: 50px;
+            animation: pulse 1.8s infinite;
+            box-shadow: 0 0 15px #ff0040;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.15); }
+        }
+
+        /* প্রতিটি বাটনের আলাদা গ্রেডিয়েন্ট কালার */
+        .b1 { background: linear-gradient(135deg, #ff006e, #ff5e00); }
+        .b2 { background: linear-gradient(135deg, #8a2be2, #ff1493); }
+        .b3 { background: linear-gradient(135deg, #00d2ff, #3a7bd5); }
+        .b4 { background: linear-gradient(135deg, #ff512f, #f09819); }
+        .b5 { background: linear-gradient(135deg, #43cea2, #185a9d); }
+        .b6 { background: linear-gradient(135deg, #fa8bff, #2bdeff); }
+        .b7 { background: linear-gradient(135deg, #ff7e5f, #feb47b); }
+        .b8 { background: linear-gradient(135deg, #667eea, #764ba2); }
+        .b9 { background: linear-gradient(135deg, #f7971e, #ffd200); }
+        .b10{background: linear-gradient(135deg, #11998e, #38ef7d); }
+
+        .footer {
+            margin-top: 70px;
+            color: #666;
+            font-size: 15px;
+            text-align: center;
+        }
+
+        @media (min-width: 600px) {
+            .grid { grid-template-columns: 1fr 1fr; gap: 25px; max-width: 900px; }
+            .header h1 { font-size: 42px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>নতুন ভাইরাল সব লিংক এখানে</h1>
+        <p>আজকের সবচেয়ে গরম ভিডিও এক ক্লিকে দেখুন</p>
+    </div>
+
+    <div class="grid">
+        <a href="video1.html"  class="btn b1">  <i class="fas fa-play-circle icon"></i> লিংক ১  <span class="badge">SUPER HOT</span></a>
+        <a href="video2.html"  class="btn b2">  <i class="fas fa-fire-flame-curved icon"></i> লিংক ২  <span class="badge">VIRAL</span></a>
+        <a href="video3.html"  class="btn b3">  <i class="fas fa-video icon"></i> লিংক ৩  <span class="badge">NEW</span></a>
+        <a href="video4.html"  class="btn b4">  <i class="fas fa-heart icon"></i> লিংক ৪  <span class="badge">TRENDING</span></a>
+        <a href="video5.html"  class="btn b5">  <i class="fas fa-star icon"></i> লিংক ৫  <span class="badge">EXCLUSIVE</span></a>
+        <a href="video6.html"  class="btn b6">  <i class="fas fa-bolt icon"></i> লিংক ৬  <span class="badge">LIVE NOW</span></a>
+        <a href="video7.html"  class="btn b7">  <i class="fas fa-crown icon"></i> লিংক ৭  <span class="badge">PREMIUM</span></a>
+        <a href="video8.html"  class="btn b8">  <i class="fas fa-gem icon"></i> লিংক ৮  <span class="badge">HD</span></a>
+        <a href="video9.html"  class="btn b9">  <i class="fas fa-rocket icon"></i> লিংক ৯  <span class="badge">TOP</span></a>
+        <a href="video10.html" class="btn b10"> <i class="fas fa-trophy icon"></i> লিংক ১০ <span class="badge">BEST</span></a>
+    </div>
+
+    <div class="footer">
+        সবচেয়ে হট কনটেন্ট শুধু তোমার জন্য
+    </div>
+
+</body>
+</html>
