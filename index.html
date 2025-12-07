@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>নতুন ভাইরাল ভিডিও লিংক</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #ffffff;
+            padding: 15px 10px 40px;
+            min-height: 100vh;
+        }
+
+        .header {
+            text-align: center;
+            margin: 20px 0 35px;
+        }
+        .header h1 {
+            font-size: 32px;
+            font-weight: 900;
+            background: linear-gradient(90deg, #ff0080, #ff4400);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 8px;
+        }
+        .header p {
+            color: #555;
+            font-size: 17px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+            transition: all 0.35s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+
+        .thumb-container {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%; /* 16:9 রেশিও */
+            background: #000;
+        }
+
+        .thumb {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .play-icon {
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            width: 64px;
+            height: 64px;
+            background: rgba(0,0,0,0.7);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .play-icon i {
+            color: white;
+            font-size: 28px;
+            margin-left: 4px;
+        }
+
+        .card:hover .play-icon {
+            background: rgba(255,0,0,0.9);
+            transform: translate(-50%, -50%) scale(1.15);
+            box-shadow: 0 0 25px rgba(255,0,0,0.6);
+        }
+
+        .info {
+            padding: 14px 16px 18px;
+        }
+
+        .title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #000;
+            line-height: 1.35;
+            margin-bottom: 8px;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #e11d48;
+            color: white;
+            font-size: 12px;
+            font-weight: bold;
+            padding: 5px 12px;
+            border-radius: 20px;
+        }
+
+        /* রেসপন্সিভ */
+        @media (min-width: 600px) {
+            .grid { grid-template-columns: repeat(2, 1fr); gap: 22px; }
+            .header h1 { font-size: 38px; }
+        }
+        @media (min-width: 1000px) {
+            .grid { grid-template-columns: repeat(3, 1fr); gap: 28px; }
+        }
+        @media (min-width: 1400px) {
+            .grid { grid-template-columns: repeat(4, 1fr); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>নতুন ভাইরাল সব লিংক এখানে</h1>
+        <p>আজকের সবচেয়ে হট ভিডিও – এক ক্লিকে দেখুন</p>
+    </div>
+
+    <div class="grid">
+
+        <a href="video1.html" class="card">
+            <div class="thumb-container">
+                <img src="https://i.ibb.co.com/0jXBYKp.jpg" alt="ভিডিও ১" class="thumb">
+                <div class="play-icon"><i class="fas fa-play"></i></div>
+            </div>
+            <div class="info">
+                <div class="title">instagram ভাইরাল ১৯ মিনিট ৩৪ সেকেন্ডের ভিডিও লিংক</div>
+                <span class="badge">SUPER HOT</span>
+            </div>
+        </a>
+
+        <a href="video2.html" class="card">
+            <div class="thumb-container">
+                <img src="https://i.ibb.co.com/0jXBYKp/2.jpg" alt="ভিডিও ২" class="thumb">
+                <div class="play-icon"><i class="fas fa-play"></i></div>
+            </div>
+            <div class="info">
+                <div class="title">লিংক ২ – নতুন ভাইরাল সেনসেশন</div>
+                <span class="badge">VIRAL</span>
+            </div>
+        </a>
+
+        <a href="video3.html" class="card">
+            <div class="thumb-container">
+                <img src="https://i.ibb.co.com/0jXBYKp/3.jpg" alt="ভিডিও ৩" class="thumb">
+                <div class="play-icon"><i class="fas fa-play"></i></div>
+            </div>
+            <div class="info">
+                <div class="title">লিংক ৩ – লাইভ স্ট্রিমিং হট</div>
+                <span class="badge">LIVE</span>
+            </div>
+        </a>
+
+        <a href="video4.html" class="card">
+            <div class="thumb-container">
+                <img src="https://i.ibb.co.com/0jXBYKp/4.jpg" alt="ভিডিও ৪" class="thumb">
+                <div class="play-icon"><i class="fas fa-play"></i></div>
+            </div>
+            <div class="info">
+                <div class="title">লিংক ৪ – ট্রেন্ডিং নাম্বার ওয়ান</div>
+                <span class="badge">TRENDING</span>
+            </div>
+        </a>
+
+        <a href="video5.html" class="card">
+            <div class="thumb-container">
+                <img src="https://i.ibb.co.com/0jXBYKp/5.jpg" alt="ভিডিও ৫" class="thumb">
+                <div class="play-icon"><i class="fas fa-play"></i></div>
+            </div>
+            <div class="info">
+                <div class="title">লিংক ৫ – এক্সক্লুসিভ কালেকশন</div>
+                <span class="badge">EXCLUSIVE</span>
+            </div>
+        </a>
+
+        <a href="video6.html" class="card">
+            <div class="thumb-container">
+                <img src="https://i.ibb.co.com/0jXBYKp/6.jpg" alt="ভিডিও ৬" class="thumb">
+                <div class="play-icon"><i class="fas fa-play"></i></div>
+            </div>
+            <div class="info">
+                <div class="title">লিংক ৬ – ফুল এইচডি সুপার হট</div>
+                <span class="badge">FULL HD</span>
+            </div>
+        </a>
+
+        <a href="video7.html" class="card">
+            <div class="thumb-container">
+                <img src="https://i.ibb.co.com/0jXBYKp/7.jpg" alt="ভিডিও ৭" class="thumb">
+                <div class="play-icon"><i class="fas fa-play"></i></div>
+            </div>
+            <div class="info">
+                <div class="title">লিংক ৭ – প্রিমিয়াম কন্টেন্ট</div>
+                <span class="badge">PREMIUM</span>
+            </div>
+        </a>
+
+        <a href="video8.html" class="card">
+            <div class="thumb-container">
+                <img src="https://i.ibb.co.com/0jXBYKp/8.jpg" alt="ভিডিও ৮" class="thumb">
+                <div class="play-icon"><i class="fas fa-play"></i></div>
+            </div>
+            <div class="info">
+                <div class="title">লিংক ৮ – টপ রেটেড ভিডিও</div>
+                <span class="badge">TOP</span>
+            </div>
+        </a>
+
+        <a href="video9.html" class="card">
+            <div class="thumb-container">
+                <img src="https://i.ibb.co.com/0jXBYKp/9.jpg" alt="ভিডিও ৯" class="thumb">
+                <div class="play-icon"><i class="fas fa-play"></i></div>
+            </div>
+            <div class="info">
+                <div class="title">লিংক ৯ – সুপার ভাইরাল ক্লিপ</div>
+                <span class="badge">VIRAL</span>
+            </div>
+        </a>
+
+        <a href="video10.html" class="card">
+            <div class="thumb-container">
+                <img src="https://i.ibb.co.com/0jXBYKp/10.jpg" alt="ভিডিও ১০" class="thumb">
+                <div class="play-icon"><i class="fas fa-play"></i></div>
+            </div>
+            <div class="info">
+                <div class="title">লিংক ১০ – বেস্ট অফ দ্য ডে</div>
+                <span class="badge">BEST</span>
+            </div>
+        </a>
+
+    </div>
+
+</body>
+</html>
