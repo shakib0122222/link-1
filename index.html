@@ -249,5 +249,114 @@
 
     </div>
 
+
+    <!-- টেলিগ্রাম ফ্লোটিং বাবল -->
+<div class="telegram-bubble">
+    <a href="https://t.me/newviral_videolink" target="_blank">
+        <i class="fab fa-telegram-plane"></i>
+    </a>
+</div>
+
+<div class="telegram-tooltip">
+    <div class="tooltip-text">
+        ভাইরাল ভিডিও গুলা দেখতে জয়েন করুন আমাদের টেলিগ্রাম চ্যানেলে
+        <span class="arrow"></span>
+    </div>
+</div>
+
+<style>
+    .telegram-bubble {
+        position: fixed;
+        bottom: 25px;
+        right: 20px;
+        width: 62px;
+        height: 62px;
+        background: linear-gradient(135deg, #0088cc, #00aaff);
+        border-radius: 50%;
+        box-shadow: 0 8px 25px rgba(0,136,204,0.5);
+        z-index: 9999;
+        animation: pulse-glow 2s infinite;
+        transition: all 0.3s ease;
+    }
+
+    .telegram-bubble a {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 34px;
+        text-decoration: none;
+    }
+
+    .telegram-bubble:hover {
+        transform: scale(1.15);
+        box-shadow: 0 12px 35px rgba(0,136,204,0.7);
+    }
+
+    @keyframes pulse-glow {
+        0% { box-shadow: 0 8px 25px rgba(0,136,204,0.5); }
+        50% { box-shadow: 0 8px 35px rgba(0,170,255,0.8); }
+        100% { box-shadow: 0 8px 25px rgba(0,136,204,0.5); }
+    }
+
+    /* টুলটিপ */
+    .telegram-tooltip {
+        position: fixed;
+        bottom: 100px;
+        right: 20px;
+        z-index: 9998;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.4s ease;
+    }
+
+    .tooltip-text {
+        background: #0088cc;
+        color: white;
+        padding: 12px 18px;
+        border-radius: 18px;
+        font-size: 15px;
+        font-weight: 600;
+        white-space: nowrap;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+        position: relative;
+    }
+
+    .tooltip-text .arrow {
+        position: absolute;
+        bottom: -8px;
+        right: 25px;
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-top: 10px solid #0088cc;
+    }
+
+    /* হোভার করলে টুলটিপ দেখাবে */
+    .telegram-bubble:hover + .telegram-tooltip {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(-10px);
+    }
+
+    /* মোবাইলে একটু ছোট করা */
+    @media (max-width: 480px) {
+        .telegram-bubble {
+            width: 56px;
+            height: 56px;
+            bottom: 20px;
+            right: 15px;
+        }
+        .telegram-bubble a { font-size: 30px; }
+        .tooltip-text { font-size: 14px; padding: 10px 15px; }
+    }
+</style>
+
+<!-- Font Awesome লোড করা (যদি আগে না থাকে) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </body>
 </html>
